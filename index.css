@@ -1,0 +1,347 @@
+@font-face {
+    font-family: 'Harrington';
+    src: url(./HARRINGT.TTF);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Harrington';
+}
+
+.navbar {
+    background-color: black;
+    
+    /* background: #131313; */
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+#navbar_logo{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%,#ffb198 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.fa-gem {
+    margin-right: 0.5rem;
+}
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+.navbar_item {
+    height: 80px;
+}
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    text-shadow: 2px 1px 1.5px aqua;
+}
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: 0 1rem;
+    padding: 0 1rem;
+    width: 100%;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.navbar_links:hover{
+    color: #f77062;
+    transition: all 0.3s ease;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar_container {
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1300px;
+            padding: 0;
+        }
+    
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 1.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: black;
+    }
+    .navbar_menu.active {
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+    #navbar_logo {
+        padding-left: 25px;
+        font-size: 35px;
+    }
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    
+    }
+    .navbar_item {
+        width: 100%;
+    }
+    .navbar_links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5% 20%);
+    }
+    .navbar_btn {
+        padding-bottom: 1rem;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 60px;
+        margin: 0;
+        box-shadow: 2px 2px 22px red;
+    }
+    .navbar_toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translate(8px) rotate(45deg);
+        
+    }
+    }
+    
+    /* navbar end */
+    .cursor{
+        position: fixed;
+        width: 70px;
+        height: 70px;
+        /* border: 1px solid red ; */
+        border: transparent;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%,-50%);
+        transition: .13s all;
+        box-shadow: 2px 2px 22px aqua;
+        background-color: #fff;
+    }
+    .cursor2{
+        position: fixed;
+        width: 6px;
+        height: 6px;
+        /* background-color: black; */
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%,-50%);
+        transition: .1s;
+    }
+
+    /* cursor animation end */
+    .home{
+        overflow: hidden;
+        height: 90vh;
+        background-color: black;
+        background-image: url(https://www.techugo.com/blog/wp-content/uploads/2019/10/Halloween-Cover-pic.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+        
+        border-top-right-radius: 20%;
+        /* border-bottom-left-radius: 20%; */
+
+    }
+    
+    .home h1{
+        color: black;
+        font-size: 6rem;
+        letter-spacing: 1vw;
+        text-shadow: 2px 2px 2px aqua;
+        position: relative;
+        top: 45%;
+        font-weight: 900;
+        transition: 2s;
+    }
+    .home h3{
+        /* color: aqua; */
+        color: red;
+        /* background-image: linear-gradient(to top, #ff0844 0%,#ffb198 100%); */
+        text-shadow: 1px 1px .1px aqua; 
+        letter-spacing: 15px;
+        position: relative;
+        top: 50%;
+        font-size: 25px;
+        
+    }
+    #bottom{
+        height: 10vh;
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        top: 65vh;
+    }
+    
+    #bottom button{
+        width: 15vw;
+        height: 5vh;
+        border-radius: 15px;
+        border: 1px solid black;
+        background-color: aqua;
+        box-shadow: 2px 2px 22px #fff;
+        font-size: 15px;
+        letter-spacing: 4px;
+        font-weight: 900;
+    }
+    #bottom button:hover{
+        color: red;
+    }
+    @media screen and (max-width: 960px){
+        .home{
+            overflow: hidden;
+            height: 90vh;
+            /* background-color: black; */
+            background-image: url(https://i.pinimg.com/736x/4a/29/40/4a2940af0e3898352826c3c751be45b1--purple-halloween-halloween-night.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top-right-radius: 1%;
+        }
+        
+        .home h1{
+            color: black;
+            font-size: 3.5rem;
+            line-height: 50px;
+            font-stretch: 20px;
+            letter-spacing: 1.5vw;
+            text-shadow: 2px 2px 2.5px aqua;
+            position: relative;
+            top: 30vh;
+            text-align: center;
+        }
+        .home h3{
+            /* text-shadow: 2px 2px 2px aqua; */
+            background-image: none;
+            letter-spacing: 1vw;
+            position: absolute;
+            top: 15vh;
+            font-size: 22px;
+            line-height: 6vh;
+            text-align: center;
+            display: flex;
+        }
+        #bottom{
+            height: 10vh;
+            width: 90vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            top: 60%;
+        }
+    
+        
+        #bottom button{
+            width: 45vw;
+            height: 5vh;
+            border-radius: 15px;
+            border: none;
+            background-color: aqua;
+            box-shadow: 2px 2px 22px #fff;
+            font-size: 15px;
+            letter-spacing: 4px;
+            font-weight: 900;
+        }
+        #bottom button:hover{
+            color: red;
+        }
+    
+    }
